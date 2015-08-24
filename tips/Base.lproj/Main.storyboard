@@ -32,16 +32,15 @@
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <rect key="contentStretch" x="0.0" y="0.0" width="0.44999999999999962" height="1"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Settings" id="OVi-36-9gK">
-                        <barButtonItem key="backBarButtonItem" title="Tip Calculator" id="GfT-uh-6Dd"/>
-                        <barButtonItem key="leftBarButtonItem" id="J9V-zn-rLK"/>
+                    <navigationItem key="navigationItem" title="Title" id="nrn-tU-CK8">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="18O-Rc-ZRv"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="wrD-Hl-Nyi"/>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v0g-Jf-34T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1732" y="203"/>
+            <point key="canvasLocation" x="2300" y="203"/>
         </scene>
         <!--Tip Calculator-->
         <scene sceneID="ufC-wZ-h7g">
@@ -97,16 +96,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" id="92A-hc-789">
-                                <rect key="frame" x="166" y="94" width="131" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
-                                <connections>
-                                    <action selector="onEditingChange:" destination="vXZ-lx-hvc" eventType="editingChanged" id="J66-vh-KU5"/>
-                                </connections>
-                            </textField>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="eQM-2x-6o7">
                                 <rect key="frame" x="23" y="287" width="274" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -120,6 +109,16 @@
                                     <action selector="onEditingChange:" destination="vXZ-lx-hvc" eventType="valueChanged" id="Zf5-4q-tr9"/>
                                 </connections>
                             </segmentedControl>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" id="92A-hc-789">
+                                <rect key="frame" x="166" y="94" width="131" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="onEditingChange:" destination="vXZ-lx-hvc" eventType="editingChanged" id="J66-vh-KU5"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -131,7 +130,7 @@
                     <navigationItem key="navigationItem" title="Tip Calculator" id="TGH-B6-D92">
                         <barButtonItem key="rightBarButtonItem" title="Settings" id="Tue-oe-dq2">
                             <connections>
-                                <segue destination="AeN-hY-8kL" kind="modal" id="AkY-VX-XYH"/>
+                                <segue destination="Qo6-wI-R3x" kind="modal" id="AkY-VX-XYH"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -160,6 +159,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
+                        <color key="barTintColor" red="0.42177840733779071" green="1" blue="0.015062371185136758" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -169,6 +169,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dyQ-Eu-SVX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="759" y="203"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cYZ-Cg-viv">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a80-Ab-jX9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Qo6-wI-R3x" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="F8y-Ki-ye2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="AeN-hY-8kL" kind="relationship" relationship="rootViewController" id="6yd-Qh-N1Z"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="1772" y="203"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
