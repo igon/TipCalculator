@@ -13,6 +13,7 @@
 		2CA329911B889CA700673DE5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CA329901B889CA700673DE5 /* Images.xcassets */; };
 		2CA329941B889CA700673DE5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CA329921B889CA700673DE5 /* LaunchScreen.xib */; };
 		2CA329A01B889CA700673DE5 /* tipsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA3299F1B889CA700673DE5 /* tipsTests.swift */; };
+		2CA329AA1B8A90BE00673DE5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA329A91B8A90BE00673DE5 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		2CA329991B889CA700673DE5 /* tipsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tipsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CA3299E1B889CA700673DE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CA3299F1B889CA700673DE5 /* tipsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tipsTests.swift; sourceTree = "<group>"; };
+		2CA329A91B8A90BE00673DE5 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = tips.xcodeproj/../SettingsViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +79,9 @@
 		2CA329861B889CA600673DE5 /* tips */ = {
 			isa = PBXGroup;
 			children = (
-				2CA329891B889CA600673DE5 /* AppDelegate.swift */,
+				2CA329A91B8A90BE00673DE5 /* SettingsViewController.swift */,
 				2CA3298B1B889CA600673DE5 /* ViewController.swift */,
+				2CA329891B889CA600673DE5 /* AppDelegate.swift */,
 				2CA3298D1B889CA700673DE5 /* Main.storyboard */,
 				2CA329901B889CA700673DE5 /* Images.xcassets */,
 				2CA329921B889CA700673DE5 /* LaunchScreen.xib */,
@@ -214,6 +217,7 @@
 			files = (
 				2CA3298C1B889CA600673DE5 /* ViewController.swift in Sources */,
 				2CA3298A1B889CA600673DE5 /* AppDelegate.swift in Sources */,
+				2CA329AA1B8A90BE00673DE5 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
