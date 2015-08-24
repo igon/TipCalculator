@@ -168,6 +168,10 @@ class SettingsViewController: UIViewController {
         "Vietnam":0,
         "Wales":10]
     
+    @IBOutlet weak var countryPicker: UIPickerView!
+    
+    var selectedCountry:String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -179,6 +183,9 @@ class SettingsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func cancel(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
 
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
@@ -193,6 +200,26 @@ class SettingsViewController: UIViewController {
         return tipsCountry[row]
      }
     
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+        selectedCountry = tipsCountry[row]
+    }
+    
+    
+    
+    @IBAction func save(sender: AnyObject) {
+        var defaults = NSUserDefaults.standardUserDefaults()
+        
+        var baseTip:Int = tipsByCountry[selectedCountry]!;
+        
+        println(baseTip)
+        
+        defaults.setObject(selectedCountry, forKey: "country")
+        defaults.setInteger(baseTip, forKey: "baseTip")
+        defaults.synchronize()
+        dismissViewControllerAnimated(true, completion: nil)
+        
+    }
     
     /*
     // MARK: - Navigation

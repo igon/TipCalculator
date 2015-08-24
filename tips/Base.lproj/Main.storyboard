@@ -34,9 +34,20 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="nrn-tU-CK8">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="18O-Rc-ZRv"/>
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="wrD-Hl-Nyi"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="18O-Rc-ZRv">
+                            <connections>
+                                <action selector="cancel:" destination="AeN-hY-8kL" id="9E7-mF-lEE"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="wrD-Hl-Nyi">
+                            <connections>
+                                <action selector="save:" destination="AeN-hY-8kL" id="qbM-6Z-5PC"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="countryPicker" destination="Fow-BE-pC4" id="EZ9-rr-n5k"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v0g-Jf-34T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -96,8 +107,18 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" id="92A-hc-789">
+                                <rect key="frame" x="166" y="94" width="131" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="onEditingChange:" destination="vXZ-lx-hvc" eventType="editingChanged" id="J66-vh-KU5"/>
+                                </connections>
+                            </textField>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="eQM-2x-6o7">
-                                <rect key="frame" x="23" y="287" width="274" height="29"/>
+                                <rect key="frame" x="23" y="333" width="274" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <segments>
@@ -109,16 +130,22 @@
                                     <action selector="onEditingChange:" destination="vXZ-lx-hvc" eventType="valueChanged" id="Zf5-4q-tr9"/>
                                 </connections>
                             </segmentedControl>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" id="92A-hc-789">
-                                <rect key="frame" x="166" y="94" width="131" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="is not common" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ul6-7E-eJE">
+                                <rect key="frame" x="28" y="308" width="269" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
-                                <connections>
-                                    <action selector="onEditingChange:" destination="vXZ-lx-hvc" eventType="editingChanged" id="J66-vh-KU5"/>
-                                </connections>
-                            </textField>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Wpf-lb-OgB">
+                                <rect key="frame" x="23" y="280" width="274" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -135,7 +162,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="baseTipLabel" destination="ul6-7E-eJE" id="Teq-qs-THr"/>
                         <outlet property="billField" destination="92A-hc-789" id="9IF-8q-vO7"/>
+                        <outlet property="countryLabel" destination="Wpf-lb-OgB" id="56u-a8-s2v"/>
                         <outlet property="tipControl" destination="eQM-2x-6o7" id="pNd-Fy-E2d"/>
                         <outlet property="tipLabel" destination="sKs-OZ-6yi" id="3Vh-E2-UuB"/>
                         <outlet property="totalLabel" destination="r5P-lC-BBi" id="Sua-fF-8Co"/>
@@ -159,7 +188,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
-                        <color key="barTintColor" red="0.42177840733779071" green="1" blue="0.015062371185136758" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -173,7 +201,6 @@
         <!--Navigation Controller-->
         <scene sceneID="cYZ-Cg-viv">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="a80-Ab-jX9" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Qo6-wI-R3x" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="F8y-Ki-ye2">
@@ -186,6 +213,7 @@
                         <segue destination="AeN-hY-8kL" kind="relationship" relationship="rootViewController" id="6yd-Qh-N1Z"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a80-Ab-jX9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1772" y="203"/>
         </scene>
