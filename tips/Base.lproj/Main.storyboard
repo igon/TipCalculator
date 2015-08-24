@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="15A262e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="15A262e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="R46-6i-h6E">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -7,7 +7,7 @@
         <!--SettingsViewController-->
         <scene sceneID="ofv-wf-sLT">
             <objects>
-                <viewController title="SettingsViewController" id="AeN-hY-8kL" sceneMemberID="viewController">
+                <viewController title="SettingsViewController" id="AeN-hY-8kL" customClass="SettingsViewController" customModule="tips" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VMo-Gs-SRg" customClass="SettingViewController">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -41,7 +41,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v0g-Jf-34T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1253" y="1032"/>
+            <point key="canvasLocation" x="1732" y="203"/>
         </scene>
         <!--Tip Calculator-->
         <scene sceneID="ufC-wZ-h7g">
@@ -131,7 +131,7 @@
                     <navigationItem key="navigationItem" title="Tip Calculator" id="TGH-B6-D92">
                         <barButtonItem key="rightBarButtonItem" title="Settings" id="Tue-oe-dq2">
                             <connections>
-                                <segue destination="6QM-hS-PMc" kind="modal" modalPresentationStyle="pageSheet" id="yit-aw-Yug"/>
+                                <segue destination="AeN-hY-8kL" kind="modal" id="AkY-VX-XYH"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -149,26 +149,26 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1253" y="396"/>
+            <point key="canvasLocation" x="1291" y="203"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="tIp-aC-rh3">
+        <scene sceneID="cuC-BJ-vdh">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6QM-hS-PMc" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="R46-6i-h6E" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RcC-0v-sKL">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GF2-tt-sV3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="AeN-hY-8kL" kind="relationship" relationship="rootViewController" id="0ff-Fn-tB8"/>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="r0V-sh-xri"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yBQ-RZ-FhO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dyQ-Eu-SVX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="682" y="644"/>
+            <point key="canvasLocation" x="759" y="203"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
