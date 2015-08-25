@@ -32,8 +32,9 @@ class ViewController: UIViewController {
         var defaults = NSUserDefaults.standardUserDefaults()
         var stringValue = defaults.objectForKey("country") as! String
         var tipBase = defaults.integerForKey("baseTip")
-        //defaults.integerForKey("baseTip")
         
+        tipLabel.text = "$0.00"
+        totalLabel.text = "$0.00"
         countryLabel.text = "In \(stringValue)"
         
         if tipBase == 0 {
@@ -69,15 +70,14 @@ class ViewController: UIViewController {
 
 
     @IBAction func onEditingChange(sender: AnyObject) {
-//        var tipPercentages = [0.18, 0.2, 0.22]
         var tipPercentage = tipPercentages[tipControl.selectedSegmentIndex]
-        
         var billAmount = (billField.text as NSString).doubleValue
         var tip = billAmount * tipPercentage
         var total = billAmount + tip
  
         tipLabel.text = String(format: "$%.2f", tip)
         totalLabel.text = String(format: "$%.2f", total)
+        
     }
     
     @IBAction func onTap(sender: AnyObject) {

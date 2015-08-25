@@ -174,7 +174,10 @@ class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        var defaults = NSUserDefaults.standardUserDefaults()
+        var stringValue = defaults.objectForKey("country") as! String
+        
         // Do any additional setup after loading the view.
     }
 
